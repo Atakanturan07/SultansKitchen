@@ -1,0 +1,130 @@
+﻿@model IEnumerable<SultansKitchen.Entity.Category>
+
+<h2>Liste</h2>
+<p>
+    @Html.ActionLink("Ekle", "Process")
+</p>
+
+
+<div class="content-wrapper">
+
+    @Html.Partial("~/Views/Shared/_ContentHeader.cshtml")
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h3 class="card-title">Bordered Table</h3>
+                                </div>
+                                <div class="col-md-8">
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="~/Category/Process" class="btn btn-block btn-success btn-sm">
+                                        <i class="fa fa-plus nav-icon"></i>
+                                        Ekle
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">ID</th>
+                                        <th>İsim</th>
+                                        <th>Resim</th>
+                                        <th style="width: 40px">İşlemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (SultansKitchen.Entity.Category item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.ID</td>
+                                            <td>@item.Name</td>
+                                            <td>
+                                                <img src="~/Category/CategoryImage/@item.ID" style="width:100px; height:100px;" />
+                                            </td>
+                                            <td>
+                                                <b class="btn btn-block btn-danger btn-sm"
+                                                   onclick='Delete(@item.ID,"@item.Name")'>
+                                                    <i class="fa fa-trash nav-icon"></i>
+                                                    Sil
+                                                </b>
+                                                <button type="button" class="btn btn-block btn-warning" data-toggle="modal" data-target="#modal-lg" onclick='Update(@item.ID,)'>
+
+                                                    <i class="fa fa-pen nav-icon"></i>
+                                                    Düzenle
+                                                </button>
+                                            </td>
+
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+            </div>
+
+
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+
+@Html.Partial("~/Views/Category/Partial/Process.cshtml",new SultansKitchen.Entity.Category())
+
+
+
+
+
+@section js{
+
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="~/plugins/jquery-validation/jquery.validate.unobtrusive.js"></script>
+    <script src="~/plugins/jquery-validation/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        function Delete(id, name) {
+
+            if (confirm('Seçili kategoriyi(' + name + ') silmek istiyor musunuz ?')) {
+                $.ajax({
+                    url: '/category/delete/' + id,
+                    type: 'post',
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data == true) {
+                            location.reload();
+                        }
+                    }
+                })
+            }
+        }
+
+    </script>
+    <script>
+        function Update(id) {
+            $.ajax({
+                url: '/category/update2/' + id,
+                type: 'post',
+                dataType: 'json',
+                success: function (data) {
+                    $("#Name").val(data.Name);
+                    $("#ID").val(data.ID);
+                }
+            })
+        }
+    </script>
+}

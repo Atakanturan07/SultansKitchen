@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SultansKitchen.Entity.FoodMaterialJunction>
+
+@Html.Partial("~/Views/Shared/_ContentHeader.cshtml")
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Yeni", "Process")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.ActionLink("Düzenle", "Process", new { item.ID }) |
+                @Html.ActionLink("Sil", "Delete", new { item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3F5C37C5-32F1-40E6-868D-95D20606BB6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation Layers", "Presentation Layers", "{0F1C7791-BB23-41F3-AED4-8C20AC028518}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SultansKitchen.Entity", "SultansKitchen.Entity\SultansKitchen.Entity.csproj", "{1F78ACC6-D96D-409E-8602-3A09F766F71A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SultansKitchen.Core", "SultansKitchen.Core\SultansKitchen.Core.csproj", "{7FE753B1-41D6-4422-AC01-AB2260597384}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SultansKitchen.WinForm", "SultansKitchen.WinForm\SultansKitchen.WinForm.csproj", "{B9B8F5A9-D388-47FC-B244-19DBEDE24F57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SultansKitchen.Web", "SultansKitchen.Web\SultansKitchen.Web.csproj", "{08B5587A-D265-4A8C-A388-26E81300BF4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SultansKitchen.Helper", "SultansKitchen\SultansKitchen.Helper.csproj", "{5FD37BDD-2B06-4D6D-A084-EF9A567E11FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F78ACC6-D96D-409E-8602-3A09F766F71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F78ACC6-D96D-409E-8602-3A09F766F71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F78ACC6-D96D-409E-8602-3A09F766F71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F78ACC6-D96D-409E-8602-3A09F766F71A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE753B1-41D6-4422-AC01-AB2260597384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE753B1-41D6-4422-AC01-AB2260597384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE753B1-41D6-4422-AC01-AB2260597384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE753B1-41D6-4422-AC01-AB2260597384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9B8F5A9-D388-47FC-B244-19DBEDE24F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B8F5A9-D388-47FC-B244-19DBEDE24F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B8F5A9-D388-47FC-B244-19DBEDE24F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B8F5A9-D388-47FC-B244-19DBEDE24F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B5587A-D265-4A8C-A388-26E81300BF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B5587A-D265-4A8C-A388-26E81300BF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B5587A-D265-4A8C-A388-26E81300BF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B5587A-D265-4A8C-A388-26E81300BF4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD37BDD-2B06-4D6D-A084-EF9A567E11FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD37BDD-2B06-4D6D-A084-EF9A567E11FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD37BDD-2B06-4D6D-A084-EF9A567E11FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD37BDD-2B06-4D6D-A084-EF9A567E11FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F78ACC6-D96D-409E-8602-3A09F766F71A} = {3F5C37C5-32F1-40E6-868D-95D20606BB6A}
+		{7FE753B1-41D6-4422-AC01-AB2260597384} = {3F5C37C5-32F1-40E6-868D-95D20606BB6A}
+		{B9B8F5A9-D388-47FC-B244-19DBEDE24F57} = {0F1C7791-BB23-41F3-AED4-8C20AC028518}
+		{08B5587A-D265-4A8C-A388-26E81300BF4A} = {0F1C7791-BB23-41F3-AED4-8C20AC028518}
+		{5FD37BDD-2B06-4D6D-A084-EF9A567E11FD} = {3F5C37C5-32F1-40E6-868D-95D20606BB6A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5774BC25-CF67-489C-ADB1-565BE2CE50E8}
+	EndGlobalSection
+EndGlobal
